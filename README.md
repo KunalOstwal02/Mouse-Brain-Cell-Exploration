@@ -1,3 +1,21 @@
+# Mouse Brain Cell Exploration & Classification
+
+We are exploring the [Xenium Mouse Brain Cell](https://www.10xgenomics.com/products/xenium-in-situ/mouse-brain-dataset-explorer) dataset. The brain cell images are classified into different cell types using a machine learning algorithm. We explore the difference in predictions based on how differently balanced classes compare with each other in the accuracy of the prediction.
+We use 3 pairs of cell types:
+- Balanced Pair: Class 8 (44 images) & Class 10 (45 images)
+- Moderately Unbalanced Pair: Class 14 (42 images) & Class 15 (23 images)
+- Highly Unbalanced Pair: Class 1 (94 images) & Class 27 (7 images)
+
+We observe the predictions by comparing:
+- the original 3 pairs
+- the 3 pairs balanced using oversampling
+- the 3 pairs balanced using undersampling
+- the 3 pairs balanced using augmented images
+- the 3 pairs balanced using weighted balancing
+
+The results from this exploration can be see below.
+
+
 ``` r
 library(plotly)
 library(png)
@@ -554,16 +572,6 @@ contributions on GitHub.
 <figure>
 <img src="augmentation.png" alt="Image Augmentation" />
 <figcaption aria-hidden="true"><em>Image Augmentation</em></figcaption>
-</figure>
-
-## A.ii Github Contribution
-
-<figure>
-<img
-src="github.sydney.edu.au_kost6112_DATA3888-Image8_graphs_contributors%20(1).png"
-width="529" alt="Individual Contributions of each member" />
-<figcaption aria-hidden="true"><em>Individual Contributions of each
-member</em></figcaption>
 </figure>
 
 # References
